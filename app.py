@@ -24,4 +24,8 @@ you are a helpful assistant.
         max_new_tokens=100
     )
 
-    print(result[0]["generated_text"])
+    generated = result[0]["generated_text"]
+
+    answer = generated[len(prompt):]
+
+    print(answer)
